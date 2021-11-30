@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Publica Sans Rounded;
+  src: url('../fonts/PublicaSansRound-Rg.otf');
+}
+
 * {
+  font-family: Publica Sans Rounded, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -87,7 +93,7 @@ body {
 .future-forecast .today .temp {
   font-size: 18px;
   padding-top: 15px;
-  color: white
+  color: white;
 }
 @media only screen and (max-width: 600px) {
   .container {
