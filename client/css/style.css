@@ -53,12 +53,12 @@ body {
 }
 
 .future-forecast {
-  background: rgba(24, 24, 27, 0.8);
+  background: rgba(96, 96, 96, 0.6);
   padding: 25px;
   position: fixed;
   bottom: 0;
   display: flex;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@ body {
 
 .future-forecast .today .day {
   padding: 5px 15px;
-  background: #3c3c44;
+  background: white;
   border-radius: 50px;
   text-align: center;
 }
@@ -87,6 +87,7 @@ body {
 .future-forecast .today .temp {
   font-size: 18px;
   padding-top: 15px;
+  color: white
 }
 @media only screen and (max-width: 600px) {
   .container {
