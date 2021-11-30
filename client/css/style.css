@@ -52,7 +52,6 @@ body {
   font-weight: 700;
 }
 
-
 .future-forecast {
   background: rgba(24, 24, 27, 0.8);
   padding: 25px;
@@ -88,4 +87,19 @@ body {
 .future-forecast .today .temp {
   font-size: 18px;
   padding-top: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .future-forecast {
+    justify-content: start;
+    align-items: none;
+    overflow-y: scroll;
+  }
+
+  .future-forecast .today .temp {
+    font-size: 16px;
+  }
 }
