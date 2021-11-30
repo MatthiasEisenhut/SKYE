@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const API_KEY = process.env.API_KEY;
+
 async function getData() {
   try {
     const { data } = await axios.get(
@@ -12,7 +14,7 @@ async function getData() {
 }
 
 router.get('/weather', async (req, res) => {
-    await res.json(getData());
-})
+  await res.json(getData());
+});
 
 module.exports = router;
