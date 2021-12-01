@@ -7,6 +7,7 @@ async function getData() {
       `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`,
     );
     console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
