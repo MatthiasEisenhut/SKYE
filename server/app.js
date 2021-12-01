@@ -4,7 +4,7 @@ const axios = require('axios');
 
 require('dotenv').config();
 
-const weatherRoute = require('./routes/data');
+const weatherRoute = require('./routes/weather');
 
 const PORT = process.env.PORT || 5000;
 
