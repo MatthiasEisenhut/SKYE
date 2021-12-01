@@ -7,7 +7,6 @@ require('dotenv').config();
 const weatherRoute = require('./routes/data');
 
 const PORT = process.env.PORT || 5000;
-const API_KEY = process.env.API_KEY;
 
 const app = express();
 

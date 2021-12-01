@@ -8,6 +8,7 @@ async function getData() {
     const { data } = await axios.get(
       `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`,
     );
+    console.log(data)
   } catch (error) {
     console.log(error);
   }
