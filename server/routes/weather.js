@@ -3,8 +3,6 @@ const router = express.Router();
 const axios = require('axios');
 const API_KEY = process.env.API_KEY;
 
-const { getData } = require('../controllers/weather');
-
 router.get('/getData', async (req, res) => {
   try {
     const { data } = await axios.get(
