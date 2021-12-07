@@ -5,9 +5,9 @@ const API_KEY = process.env.API_KEY;
 async function getData() {
   try {
     const { data } = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`,
+      `https://api.openweathermap.org/data/2.5/onecall?lat=48.2085&lon=16.3721&exclude=minutely,hourly,alerts&units=metric&appid=${API_KEY}`,
     );
-    console.log(data.list[0].wind);
+    console.log(data);
     return data;
   } catch (error) {
     console.log(error);
@@ -17,3 +17,5 @@ async function getData() {
 module.exports = {
   getData,
 };
+
+getData()
