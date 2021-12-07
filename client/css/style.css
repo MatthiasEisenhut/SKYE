@@ -104,6 +104,11 @@ body {
   padding-top: 15px;
   color: white;
 }
+
+.weather-forecast{
+
+}
+
 .future-forecast .weather-forecast {
   display: flex;
 }
@@ -120,7 +125,7 @@ body {
 }
 
 .weather-forecast .weather-item .day {
-  padding: 5px 15px;
+  padding: 5px 50px;
   background: white;
   border-radius: 50px;
   text-align: center;
@@ -130,6 +135,29 @@ body {
   font-size: 16px;
   padding-top: 15px;
   color: white;
+}
+
+.extraContainer {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.extraContainer .extraInfo {
+  font-size: 18px;
+}
+
+.extraContainer .extraInfoValue {
+  font-size: 28px;
+}
+
+.extraContainer .extraDiv {
+  margin-top: 20px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 720px) {
