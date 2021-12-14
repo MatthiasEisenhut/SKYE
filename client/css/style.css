@@ -143,7 +143,6 @@ body {
   background: rgba(24, 24, 27, 0.54);
   padding: 20px;
   border-radius: 10px;
-  margin: 10px 0;
   border: 1px solid #eee;
   margin-top: 30px;
 }
@@ -154,11 +153,10 @@ body {
 
 .extraValue {
   margin-bottom: 15px;
-  margin-left: 20px;
   font-size: 28px;
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 1600px) {
   .container {
     padding: 20px;
     margin-bottom: 100px;
@@ -230,5 +228,108 @@ body {
     justify-content: start;
     align-items: none;
     overflow-x: scroll;
+  }
+  .future-forecast .weather-forecast .day {
+    font-size: 17px;
+  }
+  .future-forecast .weather-forecast .w-icon {
+    width: 75px;
+  }
+  .future-forecast .weather-forecast .temp {
+    font-size: 17px;
+  }
+  .future-forecast .today .day {
+    font-size: 17px;
+  }
+  .future-forecast .today .temp {
+    font-size: 17px;
+  }
+  .extraInfo {
+    font-size: 16px;
+  }
+  .extraValue {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .extraInfo {
+    font-size: 14px;
+  }
+  .extraValue {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .extraInfo {
+    font-size: 14px;
+  }
+  .extraValue {
+    font-size: 18px;
+  }
+  .future-forecast .weather-forecast .day {
+    font-size: 16px;
+  }
+  .future-forecast .weather-forecast .w-icon {
+    width: 65px;
+  }
+  .future-forecast .weather-forecast .temp {
+    font-size: 16px;
+  }
+  .future-forecast .today .day {
+    font-size: 16px;
+  }
+  .future-forecast .today .temp {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .current-info .date-container .time #am-pm {
+    font-size: 16px;
+  }
+  .current-info .date-container .time {
+    font-size: 16px;
+  }
+  .current-info .date-container .date {
+    font-size: 16px;
+  }
+  .current-info .date-container .temp {
+    font-size: 16px;
+  }
+  .current-info .date-container .temp {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .future-forecast {
+    background-color: transparent;
+  }
+  .future-forecast .today .temp {
+    font-size: 14px;
+  }
+  .future-forecast .today .day {
+    font-size: 14px;
+  }
+  .future-forecast .today .w-icon {
+    width: 30px;
+  }
+  .place-container .extraContainer .extraInfo {
+    font-size: 14px;
+  }
+  .place-container .extraContainer .extraValue {
+    font-size: 12px;
+  }
+  .place-container .extraContainer {
+    margin-top: 0px;
+  }
+  .future-forecast .weather-forecast .day {
+    font-size: 14px;
+  }
+  .future-forecast .weather-forecast .w-icon {
+    width: 65px;
+  }
+  .future-forecast .weather-forecast .temp {
+    font-size: 14px;
   }
 }
