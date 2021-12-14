@@ -4,32 +4,26 @@
   "timezone": "Europe/Vienna",
   "timezone_offset": 3600,
   "current": {
-    "dt": 1639471254,
+    "dt": 1639474913,
     "sunrise": 1639463872,
     "sunset": 1639494041,
-    "temp": 6.03,
-    "feels_like": 4.78,
-    "pressure": 1028,
-    "humidity": 88,
-    "dew_point": 4.2,
-    "uvi": 0.26,
+    "temp": 6.64,
+    "feels_like": 6.64,
+    "pressure": 1027,
+    "humidity": 87,
+    "dew_point": 4.63,
+    "uvi": 0.53,
     "clouds": 75,
-    "visibility": 3900,
-    "wind_speed": 1.79,
-    "wind_deg": 333,
-    "wind_gust": 4.02,
+    "visibility": 5000,
+    "wind_speed": 0.89,
+    "wind_deg": 275,
+    "wind_gust": 1.34,
     "weather": [
       {
         "id": 300,
         "main": "Drizzle",
         "description": "light intensity drizzle",
         "icon": "09d"
-      },
-      {
-        "id": 701,
-        "main": "Mist",
-        "description": "mist",
-        "icon": "50d"
       }
     ]
   },
@@ -42,22 +36,22 @@
       "moonset": 1639445940,
       "moon_phase": 0.36,
       "temp": {
-        "day": 6.01,
+        "day": 6.64,
         "min": 4.45,
-        "max": 6.37,
+        "max": 6.64,
         "night": 5.32,
         "eve": 5.38,
         "morn": 4.5
       },
       "feels_like": {
-        "day": 4.63,
+        "day": 5.37,
         "night": 3.4,
         "eve": 3.78,
         "morn": 3.06
       },
-      "pressure": 1028,
-      "humidity": 88,
-      "dew_point": 4.18,
+      "pressure": 1027,
+      "humidity": 87,
+      "dew_point": 4.63,
       "wind_speed": 2.55,
       "wind_deg": 310,
       "wind_gust": 8.15,
@@ -69,7 +63,7 @@
           "icon": "10d"
         }
       ],
-      "clouds": 79,
+      "clouds": 75,
       "pop": 0.4,
       "rain": 0.21,
       "uvi": 0.59

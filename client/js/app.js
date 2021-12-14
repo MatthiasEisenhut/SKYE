@@ -7,6 +7,8 @@ const myApp = {
       sunrise: "",
       sundown: "",
       date: "",
+      ampm: "",
+      dir: "",
     };
   },
   async created() {
@@ -32,7 +34,29 @@ const myApp = {
         useGrouping: false,
       });
     var today = new Date(this.weather.current.dt * 1000);
-    this.date = today.getDate() + "/" + today.getMonth();
+    this.date =
+      today.getHours() +
+      ":" +
+      today.getMinutes().toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
+
+    if (today.getHours() <= 12) {
+      this.ampm = "AM";
+    } else {
+      this.ampm = "PM";
+    }
+
+    var directions = ["N", "N-E", "E", "S-E", "S", "S-W", "W", "N-W  "];
+
+    var index =
+      Math.round(
+        ((this.weather.current.wind_deg %= 360) < 0
+          ? this.weather.current.wind_deg + 360
+          : this.weather.current.wind_deg) / 45
+      ) % 8;
+    this.dir = directions[index];
   },
 };
 
