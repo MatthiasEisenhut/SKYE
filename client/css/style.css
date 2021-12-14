@@ -229,7 +229,7 @@ body {
     align-items: none;
     overflow-x: scroll;
   }
-  /* .future-forecast .weather-forecast .day {
+  .future-forecast .weather-forecast .day {
     font-size: 17px;
   }
   .future-forecast .weather-forecast .w-icon {
@@ -249,10 +249,10 @@ body {
   }
   .extraValue {
     font-size: 20px;
-  } */
+  }
 }
 
-/* @media only screen and (max-width: 280px) {
+@media only screen and (max-width: 280px) {
   .extraInfo {
     font-size: 14px;
   }
@@ -300,4 +300,36 @@ body {
   .current-info .date-container .temp {
     font-size: 16px;
   }
-} */
+}
+@media only screen and (max-width: 360px) {
+  .future-forecast {
+    background-color: transparent;
+  }
+  .future-forecast .today .temp {
+    font-size: 14px;
+  }
+  .future-forecast .today .day {
+    font-size: 14px;
+  }
+  .future-forecast .today .w-icon {
+    width: 30px;
+  }
+  .place-container .extraContainer .extraInfo {
+    font-size: 14px;
+  }
+  .place-container .extraContainer .extraValue {
+    font-size: 12px;
+  }
+  .place-container .extraContainer {
+    margin-top: 0px;
+  }
+  .future-forecast .weather-forecast .day {
+    font-size: 14px;
+  }
+  .future-forecast .weather-forecast .w-icon {
+    width: 65px;
+  }
+  .future-forecast .weather-forecast .temp {
+    font-size: 14px;
+  }
+}
