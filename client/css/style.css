@@ -1,6 +1,6 @@
 @font-face {
   font-family: Publica Sans Rounded;
-  src: url('../fonts/PublicaSansRound-Rg.otf');
+  src: url("../fonts/PublicaSansRound-Rg.otf");
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url('https://s1.1zoom.me/b5153/940/Vienna_Austria_Pond_Palace_Belvedere_Palace_Night_525714_1920x1080.jpg');
+  background: url("https://s1.1zoom.me/b5153/940/Vienna_Austria_Pond_Palace_Belvedere_Palace_Night_525714_1920x1080.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -29,7 +29,8 @@ body {
   flex-wrap: wrap;
 }
 .date-container {
-  font-weight: 100;
+  font-weight: 900;
+  /* font-weight: bold; */
 }
 .date-container .time {
   font-size: 70px;
@@ -70,7 +71,7 @@ body {
 }
 
 .future-forecast {
-  background: rgba(96, 96, 96, 0.6);
+  background: rgba(61, 61, 61, 0.6);
   padding: 25px;
   bottom: 0;
   position: fixed;
@@ -99,6 +100,7 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
+  color: black;
 }
 
 .future-forecast .today .temp {
@@ -129,6 +131,7 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
+  color: black;
 }
 
 .weather-forecast .weather-item .temp {
@@ -140,11 +143,14 @@ body {
 .extraContainer {
   display: flex;
   flex-direction: column;
-  background: rgba(24, 24, 27, 0.54);
-  padding: 20px;
+  background: rgba(61, 61, 61, 0.6);
+  padding: 30px;
   border-radius: 10px;
   border: 1px solid #eee;
   margin-top: 30px;
+  text-align: center;
+  font-weight: 900;
+
 }
 
 .extraInfo {

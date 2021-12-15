@@ -64,12 +64,12 @@
 
       <div class="future-forecast">
         <div class="today" id="current-temp">
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+          <img :src="imagetoday"/>
           <div class="other">
             <div class="day">{{one}}</div>
-            <div class="temp">Maximum - {{}}°C</div>
-            <div class="temp">Average - 35.6°C</div>
-            <div class="temp">Minimum - 35.6°C</div>
+            <div class="temp">Maximum - {{weather.daily[0].temp.max}}°C</div>
+            <div class="temp">Average - {{weather.daily[0].temp.day}}°C</div>
+            <div class="temp">Minimum - {{weather.daily[0].temp.min}}°C</div>
           </div>
         </div>
 
@@ -77,57 +77,62 @@
           <div class="weather-item" id="current-temp">
             <div class="day">{{two}}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              :src="imagetwo"
               alt="weather icon"
               class="w-icon"
             />
-            <div class="temp">Max - 22.6°C</div>
-            <div class="temp">Avg - 22.6°C</div>
-            <div class="temp">Min - 32.7°C</div>
+            <div>{{weather.daily[1].weather[0].description}}</div>
+            <div class="temp">Max - {{weather.daily[1].temp.max}}°C</div>
+            <div class="temp">Avg - {{weather.daily[1].temp.day}}°C</div>
+            <div class="temp">Min - {{weather.daily[1].temp.min}}°C</div>
           </div>
 
           <div class="weather-item" id="current-temp">
             <div class="day">{{three}}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              :src="imagethree"
               alt="weather icon"
               class="w-icon"
             />
-            <div class="temp">Night - 22.6°C</div>
-            <div class="temp">Day - 32.7°C</div>
+            <div class="temp">Max - {{weather.daily[2].temp.max}}°C</div>
+            <div class="temp">Avg - {{weather.daily[2].temp.day}}°C</div>
+            <div class="temp">Min - {{weather.daily[2].temp.min}}°C</div>
           </div>
 
           <div class="weather-item" id="current-temp">
             <div class="day">{{four}}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              :src="imagefour"
               alt="weather icon"
               class="w-icon"
             />
-            <div class="temp">Night - 22.6°C</div>
-            <div class="temp">Day - 32.7°C</div>
+            <div class="temp">Max - {{weather.daily[3].temp.max}}°C</div>
+            <div class="temp">Avg - {{weather.daily[3].temp.day}}°C</div>
+            <div class="temp">Min - {{weather.daily[3].temp.min}}°C</div>
           </div>
 
           <div class="weather-item" id="current-temp">
             <div class="day">{{five}}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              :src="imagefive"
               alt="weather icon"
               class="w-icon"
             />
-            <div class="temp">Night - 22.6°C</div>
-            <div class="temp">Day - 32.7°C</div>
+            <div class="temp">Max - {{weather.daily[4].temp.max}}°C</div>
+            <div class="temp">Avg - {{weather.daily[4].temp.day}}°C</div>
+            <div class="temp">Min - {{weather.daily[4].temp.min}}°C</div>
           </div>
 
           <div class="weather-item" id="current-temp">
             <div class="day">{{six}}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              :src="imagesix"
               alt="weather icon"
               class="w-icon"
             />
-            <div class="temp">Night - 22.4°C</div>
-            <div class="temp">Day - 32.7°C</div>
+            <div class="temp">Max - {{weather.daily[5].temp.max}}°C</div>
+            <div class="temp">Avg - {{weather.daily[5].temp.day}}°C</div>
+            <div class="temp">Min - {{weather.daily[5].temp.min}}°C</div>
           </div>
         </div>
       </div>
