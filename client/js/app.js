@@ -22,7 +22,7 @@ const myApp = {
       imagefour: '',
       imagefive: '',
       imagesix: '',
-      windSpeed: 0,
+      windSpeed: 10,
     };
   },
   async created() {
@@ -54,7 +54,7 @@ const myApp = {
     const sixthday = new Date(this.weather.daily[5].dt * 1000);
     const rise = new Date(this.weather.current.sunrise * 1000);
     const down = new Date(this.weather.current.sunset * 1000);
-    const windSpeed = Math.round(this.weather.current.wind_speed);
+    this.windSpeed = this.weather.current.wind_speed.toFixed(2);
 
     this.sunrise =
       rise.getHours() +
