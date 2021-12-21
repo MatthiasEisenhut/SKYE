@@ -22,7 +22,7 @@ const myApp = {
       imagefour: '',
       imagefive: '',
       imagesix: '',
-      windSpeed: 10,
+      windSpeed: 0,
     };
   },
   async created() {
@@ -54,7 +54,6 @@ const myApp = {
     const sixthday = new Date(this.weather.daily[5].dt * 1000);
     const rise = new Date(this.weather.current.sunrise * 1000);
     const down = new Date(this.weather.current.sunset * 1000);
-    this.windSpeed = this.weather.current.wind_speed.toFixed(2);
 
     this.sunrise =
       rise.getHours() +
@@ -103,6 +102,7 @@ const myApp = {
           : this.weather.current.wind_deg) / 45,
       ) % 8;
     this.dir = directions[index];
+    this.windSpeed = this.weather.current.wind_speed.toFixed(2);
 
     this.imagetoday = `http://openweathermap.org/img/wn/${this.weather.current.weather[0].icon}@2x.png`;
     this.imagetwo = `http://openweathermap.org/img/wn/${this.weather.daily[1].weather[0].icon}@2x.png`;
