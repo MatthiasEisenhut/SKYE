@@ -21,6 +21,7 @@
             <div class="time" id="time">{{date}}<span id="am-pm">{{ampm}}</span></div>
             <div class="date" id="date">{{currentdatetime}}</div>
             <div class="temp">{{weather.current.temp}}°C</div>
+            <img :src="imagetoday" alt="">
             <div class="weather">{{weather.current.weather[0].main}}</div>
           </div>
           <div class="box">
