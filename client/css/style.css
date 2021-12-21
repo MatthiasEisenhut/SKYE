@@ -1,6 +1,6 @@
 @font-face {
   font-family: Publica Sans Rounded;
-  src: url("../fonts/PublicaSansRound-Rg.otf");
+  src: url('../fonts/PublicaSansRound-Rg.otf');
 }
 
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url("https://s1.1zoom.me/b5153/940/Vienna_Austria_Pond_Palace_Belvedere_Palace_Night_525714_1920x1080.jpg");
+  background: url('https://s1.1zoom.me/b5153/940/Vienna_Austria_Pond_Palace_Belvedere_Palace_Night_525714_1920x1080.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -30,7 +30,6 @@ body {
 }
 .date-container {
   font-weight: 900;
-  /* font-weight: bold; */
 }
 .date-container .time {
   font-size: 70px;
@@ -72,8 +71,10 @@ body {
 
 .future-forecast {
   background: rgba(61, 61, 61, 0.6);
+  /* background-color: black; */
   padding: 25px;
   bottom: 0;
+  left: 0;
   position: fixed;
   display: flex;
   width: 100%;
@@ -150,7 +151,6 @@ body {
   margin-top: 30px;
   text-align: center;
   font-weight: 900;
-
 }
 
 .extraInfo {
