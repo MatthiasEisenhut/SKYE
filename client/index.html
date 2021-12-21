@@ -45,7 +45,7 @@
               </div>
               <div>
                 <div class="extraInfo">Rain</div>
-                <div v-if="weather.daily[0] < 0" class="extraValue">{{weather.daily[0].rain}}mm ({{weather.daily[0].pop*100}}%)</div>
+                <div v-if="weather.daily[0].rain < 0" class="extraValue">{{weather.daily[0].rain}}mm ({{weather.daily[0].pop*100}}%)</div>
                 <div v-else class="extraValue">0mm ({{weather.daily[0].pop*100}}%)</div>
               </div>
               <div>
