@@ -4,47 +4,57 @@ const myApp = {
   data() {
     return {
       weather: [],
-      sunrise: '',
-      sundown: '',
-      date: '',
-      ampm: '',
-      dir: '',
-      currentdatetime: '',
-      one: '',
-      two: '',
-      three: '',
-      four: '',
-      five: '',
-      six: '',
-      imagetoday: '',
-      imagetwo: '',
-      imagethree: '',
-      imagefour: '',
-      imagefive: '',
-      imagesix: '',
+      sunrise: "",
+      sundown: "",
+      date: "",
+      ampm: "",
+      dir: "",
+      currentdatetime: "",
+      one: "",
+      two: "",
+      three: "",
+      four: "",
+      five: "",
+      six: "",
+      imagetoday: "",
+      imagetwo: "",
+      imagethree: "",
+      imagefour: "",
+      imagefive: "",
+      imagesix: "",
       windSpeed: 0,
-      city: 'London',
+      city: "London",
     };
   },
   async created() {
-    const { data } = await axios.get(`http://localhost:3000/weather/getData/${this.city}`);
+    const { data } = await axios.get(
+      `http://localhost:3000/weather/getData/${this.city}`
+    );
     this.weather = data;
 
-    const directions = ['N', 'N-E', 'E', 'S-E', 'S', 'S-W', 'W', 'N-W  '];
-    const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const directions = ["N", "N-E", "E", "S-E", "S", "S-W", "W", "N-W  "];
+    const weekday = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     const month = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
 
     const today = new Date();
@@ -58,36 +68,40 @@ const myApp = {
 
     this.sunrise =
       rise.getHours() +
-      ':' +
-      rise.getMinutes().toLocaleString('en-US', {
+      ":" +
+      rise.getMinutes().toLocaleString("en-US", {
         minimumIntegerDigits: 2,
         useGrouping: false,
       });
 
     this.sundown =
       down.getHours() +
-      ':' +
-      down.getMinutes().toLocaleString('en-US', {
+      ":" +
+      down.getMinutes().toLocaleString("en-US", {
         minimumIntegerDigits: 2,
         useGrouping: false,
       });
 
     this.date =
       today.getHours() +
-      ':' +
-      today.getMinutes().toLocaleString('en-US', {
+      ":" +
+      today.getMinutes().toLocaleString("en-US", {
         minimumIntegerDigits: 2,
         useGrouping: false,
       });
 
     if (today.getHours() <= 12) {
-      this.ampm = 'AM';
+      this.ampm = "AM";
     } else {
-      this.ampm = 'PM';
+      this.ampm = "PM";
     }
 
     this.currentdatetime =
-      weekday[today.getDay()] + ', ' + today.getDate() + ' ' + month[today.getMonth()];
+      weekday[today.getDay()] +
+      ", " +
+      today.getDate() +
+      " " +
+      month[today.getMonth()];
 
     this.one = weekday[today.getDay()];
     this.two = weekday[secondday.getDay()].substring(0, 3);
@@ -100,7 +114,7 @@ const myApp = {
       Math.round(
         ((this.weather.current.wind_deg %= 360) < 0
           ? this.weather.current.wind_deg + 360
-          : this.weather.current.wind_deg) / 45,
+          : this.weather.current.wind_deg) / 45
       ) % 8;
     this.dir = directions[index];
     this.windSpeed = this.weather.current.wind_speed.toFixed(2);
@@ -114,32 +128,34 @@ const myApp = {
   },
   methods: {
     async searchMethod() {
-      const { data } = await axios.get(`http://localhost:3000/weather/getData/${this.city}`);
+      const { data } = await axios.get(
+        `http://localhost:3000/weather/getData/${this.city}`
+      );
       this.weather = data;
 
-      const directions = ['N', 'N-E', 'E', 'S-E', 'S', 'S-W', 'W', 'N-W  '];
+      const directions = ["N", "N-E", "E", "S-E", "S", "S-W", "W", "N-W  "];
       const weekday = [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
       ];
       const month = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
       ];
 
       const today = new Date();
@@ -153,36 +169,40 @@ const myApp = {
 
       this.sunrise =
         rise.getHours() +
-        ':' +
-        rise.getMinutes().toLocaleString('en-US', {
+        ":" +
+        rise.getMinutes().toLocaleString("en-US", {
           minimumIntegerDigits: 2,
           useGrouping: false,
         });
 
       this.sundown =
         down.getHours() +
-        ':' +
-        down.getMinutes().toLocaleString('en-US', {
+        ":" +
+        down.getMinutes().toLocaleString("en-US", {
           minimumIntegerDigits: 2,
           useGrouping: false,
         });
 
       this.date =
         today.getHours() +
-        ':' +
-        today.getMinutes().toLocaleString('en-US', {
+        ":" +
+        today.getMinutes().toLocaleString("en-US", {
           minimumIntegerDigits: 2,
           useGrouping: false,
         });
 
       if (today.getHours() <= 12) {
-        this.ampm = 'AM';
+        this.ampm = "AM";
       } else {
-        this.ampm = 'PM';
+        this.ampm = "PM";
       }
 
       this.currentdatetime =
-        weekday[today.getDay()] + ', ' + today.getDate() + ' ' + month[today.getMonth()];
+        weekday[today.getDay()] +
+        ", " +
+        today.getDate() +
+        " " +
+        month[today.getMonth()];
 
       this.one = weekday[today.getDay()];
       this.two = weekday[secondday.getDay()].substring(0, 3);
@@ -195,7 +215,7 @@ const myApp = {
         Math.round(
           ((this.weather.current.wind_deg %= 360) < 0
             ? this.weather.current.wind_deg + 360
-            : this.weather.current.wind_deg) / 45,
+            : this.weather.current.wind_deg) / 45
         ) % 8;
       this.dir = directions[index];
       this.windSpeed = this.weather.current.wind_speed.toFixed(2);
@@ -210,7 +230,7 @@ const myApp = {
   },
 };
 
-createApp(myApp).mount('#app');
+createApp(myApp).mount("#app");
 
 module.exports = {
   city,
