@@ -25,12 +25,26 @@
   padding-left: 10px;
 }
 
+
+
 @media only screen and (max-width: 730px) {
   .box {
     width: 200px;
+    height: 30px;
   }
   .box > input {
     height: 40px;
     width: 40px;
+  }
+}
+
+@media only screen and (max-height: 785px) {
+  .box {
+    width: 400px;
+    height: 30px;
+  }
+  .box > input {
+    height: 40px;
+    width: 100px;
   }
 }

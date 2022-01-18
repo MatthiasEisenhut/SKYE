@@ -29,7 +29,7 @@ body {
   flex-wrap: wrap;
 }
 .date-container {
-  font-weight: 900;
+  font-weight: 100;
 }
 .date-container .time {
   font-size: 70px;
@@ -47,11 +47,9 @@ body {
 
 .date-container .date {
   font-size: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
-.container .temp {
-  font-size: 60px;
+.container .current-info .date-container .temp {
+  font-size: 50px;
 }
 .place-container {
   text-align: end;
@@ -63,18 +61,30 @@ body {
   display: flex;
 }
 
+.current-info .others {
+  display: flex;
+  flex-direction: column;
+  background: rgba(24, 24, 27, 0.6);
+  padding: 20px;
+  gap: 5px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid #eee;
+}
+.current-info .place-container .others .weather-item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .place-container .country {
   font-size: 12px;
   font-weight: 700;
-  display: flex;
 }
 
 .future-forecast {
-  background: rgba(61, 61, 61, 0.6);
-  /* background-color: black; */
+  background: rgba(96, 96, 96, 0.6);
   padding: 25px;
   bottom: 0;
-  left: 0;
   position: fixed;
   display: flex;
   width: 100%;
@@ -101,7 +111,6 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
-  color: black;
 }
 
 .future-forecast .today .temp {
@@ -132,7 +141,6 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 24px;
-  color: black;
 }
 
 .weather-forecast .weather-item .temp {
@@ -141,31 +149,9 @@ body {
   color: white;
 }
 
-.extraContainer {
-  display: flex;
-  flex-direction: column;
-  background: rgba(61, 61, 61, 0.6);
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  margin-top: 30px;
-  text-align: center;
-  font-weight: 900;
-}
-
-.extraInfo {
-  font-size: 20px;
-}
-
-.extraValue {
-  margin-bottom: 15px;
-  font-size: 28px;
-}
-
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 730px) {
   .container {
     padding: 20px;
-    margin-bottom: 100px;
   }
 
   .future-forecast {
@@ -179,14 +165,7 @@ body {
   }
 
   .date-container .time {
-    font-size: 30px;
-  }
-  .date-container .temp {
-    font-size: 20px;
-  }
-
-  .weather {
-    font-size: 20px;
+    font-size: 50px;
   }
 
   .date-container #am-pm {
@@ -203,29 +182,15 @@ body {
   }
 
   .place-container .time-zone {
-    font-size: 25px;
-    display: flex;
-  }
-  .place-container .country {
-    display: flex;
-    font-size: 15px;
-    margin-top: 5px;
+    font-size: 20px;
   }
 
-  .extraContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    column-gap: 20px;
+  .current-info .others {
+    padding: 12px;
   }
 
-  .extraInfo {
+  .current-info .others .weather-item {
     font-size: 14px;
-  }
-  .extraValue {
-    font-size: 18px;
   }
 }
 
@@ -235,107 +200,64 @@ body {
     align-items: none;
     overflow-x: scroll;
   }
-  .future-forecast .weather-forecast .day {
-    font-size: 17px;
-  }
-  .future-forecast .weather-forecast .w-icon {
-    width: 75px;
-  }
-  .future-forecast .weather-forecast .temp {
-    font-size: 17px;
-  }
-  .future-forecast .today .day {
-    font-size: 17px;
-  }
-  .future-forecast .today .temp {
-    font-size: 17px;
-  }
-  .extraInfo {
-    font-size: 16px;
-  }
-  .extraValue {
-    font-size: 20px;
-  }
 }
-
-@media only screen and (max-width: 280px) {
-  .extraInfo {
-    font-size: 14px;
+@media only screen and (max-height: 652px) {
+  .future-forecast  {
+    width:100%;
+    font-size: 10px;
+    padding: 10px;
   }
-  .extraValue {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  .extraInfo {
-    font-size: 14px;
-  }
-  .extraValue {
-    font-size: 18px;
-  }
-  .future-forecast .weather-forecast .day {
-    font-size: 16px;
-  }
-  .future-forecast .weather-forecast .w-icon {
-    width: 65px;
-  }
-  .future-forecast .weather-forecast .temp {
-    font-size: 16px;
-  }
-  .future-forecast .today .day {
-    font-size: 16px;
-  }
-  .future-forecast .today .temp {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .current-info .date-container .time #am-pm {
-    font-size: 16px;
-  }
-  .current-info .date-container .time {
-    font-size: 16px;
-  }
-  .current-info .date-container .date {
-    font-size: 16px;
-  }
-  .current-info .date-container .temp {
-    font-size: 16px;
-  }
-  .current-info .date-container .temp {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .future-forecast {
-    background-color: transparent;
-  }
-  .future-forecast .today .temp {
-    font-size: 14px;
-  }
-  .future-forecast .today .day {
-    font-size: 14px;
-  }
-  .future-forecast .today .w-icon {
-    width: 30px;
-  }
-  .place-container .extraContainer .extraInfo {
-    font-size: 14px;
-  }
-  .place-container .extraContainer .extraValue {
+  .future-forecast .weather-forecast .weather-item .temp  {
     font-size: 12px;
   }
-  .place-container .extraContainer {
-    margin-top: 0px;
+  .future-forecast .weather-forecast .weather-item .day  {
+    font-size: 15px;
+    margin-bottom: 6px;
   }
-  .future-forecast .weather-forecast .day {
+  .future-forecast .weather-forecast{
+    height: 120px;
+  }
+  .future-forecast .weather-forecast .w-icon{
+    height: 10vh;
+  }
+  .future-forecast  .w-icon{
+    display: none;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .future-forecast  {
+    width:100%;
+    font-size: 10px;
+    padding: 10px;
+  }
+  .future-forecast .weather-forecast .weather-item .temp  {
     font-size: 14px;
   }
-  .future-forecast .weather-forecast .w-icon {
-    width: 65px;
+  .future-forecast .weather-forecast .weather-item .day  {
+    font-size: 20px;
+    margin-bottom: 6px;
   }
-  .future-forecast .weather-forecast .temp {
-    font-size: 14px;
+  .future-forecast .weather-forecast .w-icon{
+    height: 10vh;
+  }
+  .future-forecast  .w-icon{
+    width: 80px;
+  }
+}
+@media only screen and (max-height: 860px) {
+  .container .current-info .date-container .time #am-pm{
+    font-size: 16px
+  }
+  .container .current-info .date-container .time{
+    font-size: 26px
+  }
+  .container .current-info .date-container .date{
+    font-size: 26px
+  }
+  .container .current-info .date-container .temp{
+    font-size: 30px
+  }
+  .container .current-info .date-container .weather{
+    font-size: 18px
   }
 }

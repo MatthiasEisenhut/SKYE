@@ -6,158 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/searchBar.css" />
-    <link rel="icon" href="./img/logo.svg">
     <title>SKYE</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
-    <div id="app">
-      <div class="container">
-        <div class="current-info">
-          <div class="date-container">
-            <div class="time" id="time">{{date}}<span id="am-pm">{{ampm}}</span></div>
-            <div class="date" id="date">{{currentdatetime}}</div>
-            <div class="temp">{{weather.current.temp}}°C</div>
-            <img :src="imagetoday" alt="">
-            <div class="weather">{{weather.current.weather[0].main}}</div>
-          </div>
-          <div class="box">
-            <i class="fa fa-search" aria-hidden="true"></i>
-
-            <input @keyup.enter="searchMethod" v-model="city" type="text" />
-
-          </div>
-
-          <div class="place-container">
-            <div class="time-zone" id="time-zone">{{weather.timezone}}</div>
-            <!-- <div class="country" id="country">AT</div> -->
-
-          <div class="extraContainer">
-              <div>
-                <div class="extraInfo">Humidity</div>
-                <div class="extraValue">{{weather.current.humidity}}%</div>
-              </div>
-              <div>
-                <div class="extraInfo">Pressure</div>
-                <div class="extraValue">{{weather.current.pressure}} PS</div>
-              </div>
-              <div>
-                <div class="extraInfo">Rain</div>
-                <div v-if="weather.daily[0].rain < 0" class="extraValue">{{weather.daily[0].rain}}mm ({{weather.daily[0].pop*100}}%)</div>
-                <div v-else class="extraValue">0mm ({{weather.daily[0].pop*100}}%)</div>
-              </div>
-              <div>
-                <div class="extraInfo">Windspeed</div>
-                <div class="extraValue">{{windSpeed*10}}km/h {{dir}}</div>
-              </div>
-              <div>
-                <div class="extraInfo">Sunrise</div>
-                <div class="extraValue">{{sunrise}}am</div>
-              </div>
-              <div>
-                <div class="extraInfo">Sunset</div>
-                <div class="extraValue">{{sundown}}pm</div>
-              </div>
-          </div>
+    <div class="container">
+      <div class="current-info">
+        <div class="date-container">
+          <div class="time" id="time">12:30 <span id="am-pm">PM</span></div>
+          <div class="date" id="date">Monday, 29 November</div>
+          <div class="temp">28°C</div>
+          <div class="weather">Rainy</div>
         </div>
-      </div>
-
-      <div class="future-forecast">
-        <div class="today" id="current-temp">
-          <div style="text-align: center">
-            <img :src="imagetoday"/>
-          <div>{{weather.daily[0].weather[0].description}}</div>
-        </div>
-          <div class="other">
-            <div class="day">Today</div>
-            <div class="temp">Maximum - {{weather.daily[0].temp.max}}°C</div>
-            <div class="temp">Average - {{weather.daily[0].temp.day}}°C</div>
-            <div class="temp">Minimum - {{weather.daily[0].temp.min}}°C</div>
-          </div>
+        <div class="box">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input lass="input" type="text" />
         </div>
 
-        <div class="weather-forecast">
-          <div class="weather-item" id="current-temp">
-            <div class="day">{{two}}</div>
-            <img
-              :src="imagetwo"
-              alt="weather icon"
-              class="w-icon"
-            />
-            <div>{{weather.daily[1].weather[0].description}}</div>
-            <!-- <div class="temp">Max - {{weather.daily[1].temp.max}}°C</div> -->
-            <div class="temp">{{weather.daily[1].temp.day}}°C</div>
-            <!-- <div class="temp">Min - {{weather.daily[1].temp.min}}°C</div> -->
-          </div>
-
-          <div class="weather-item" id="current-temp">
-            <div class="day">{{three}}</div>
-            <img
-              :src="imagethree"
-              alt="weather icon"
-              class="w-icon"
-            />
-            <!-- <div class="temp">Max - {{weather.daily[2].temp.max}}°C</div> -->
-            <div>{{weather.daily[2].weather[0].description}}</div>
-            <div class="temp">{{weather.daily[2].temp.day}}°C</div>
-            <!-- <div class="temp">Min - {{weather.daily[2].temp.min}}°C</div> -->
-          </div>
-
-          <div class="weather-item" id="current-temp">
-            <div class="day">{{four}}</div>
-            <img
-              :src="imagefour"
-              alt="weather icon"
-              class="w-icon"
-            />
-            <!-- <div class="temp">Max - {{weather.daily[3].temp.max}}°C</div> -->
-            <div>{{weather.daily[3].weather[0].description}}</div>
-            <div class="temp">{{weather.daily[3].temp.day}}°C</div>
-            <!-- <div class="temp">Min - {{weather.daily[3].temp.min}}°C</div> -->
-          </div>
-
-          <div class="weather-item" id="current-temp">
-            <div class="day">{{five}}</div>
-            <img
-              :src="imagefive"
-              alt="weather icon"
-              class="w-icon"
-            />
-            <!-- <div class="temp">Max - {{weather.daily[4].temp.max}}°C</div> -->
-            <div>{{weather.daily[4].weather[0].description}}</div>
-            <div class="temp">{{weather.daily[4].temp.day}}°C</div>
-            <!-- <div class="temp">Min - {{weather.daily[4].temp.min}}°C</div> -->
-          </div>
-
-          <div class="weather-item" id="current-temp">
-            <div class="day">{{six}}</div>
-            <img
-              :src="imagesix"
-              alt="weather icon"
-              class="w-icon"
-            />
-            <!-- <div class="temp">Max - {{weather.daily[5].temp.max}}°C</div> -->
-            <div>{{weather.daily[5].weather[0].description}}</div>
-            <div class="temp">{{weather.daily[5].temp.day}}°C</div>
-            <!-- <div class="temp">Min - {{weather.daily[5].temp.min}}°C</div> -->
+        <div class="place-container">
+          <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+          <div id="country" class="country">IN</div>
+          <div class="others">
+            <div class="weather-item">
+              Humidity
+              <div>62%</div>
+            </div>
+            <div class="weather-item">
+              Pressure
+              <div>1035</div>
+            </div>
+            <div class="weather-item">
+              Wind Speed
+              <div>4.92</div>
+            </div>
+            <div class="weather-item">
+              Rain
+              <div>2 mm</div>
+            </div>
+            <div class="weather-item">
+              Sunrise
+              <div>7 am</div>
+            </div>
+            <div class="weather-item">
+              Sunset
+              <div>7 pm</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/vue@next"></script>
+
+    <div class="future-forecast">
+      <div class="today" id="current-temp">
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" class="w-icon" />
+        <div class="other">
+          <div class="day">Monday</div>
+          <div class="temp">Night - 25.6°C</div>
+          <div class="temp">Day - 35.6°C</div>
+        </div>
+      </div>
+
+      <div class="weather-forecast">
+        <div class="weather-item" id="current-temp">
+          <div class="day">Tue</div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+          />
+          <div class="temp">Night - 22.6°C</div>
+          <div class="temp">Day - 32.7°C</div>
+        </div>
+
+        <div class="weather-item" id="current-temp">
+          <div class="day">Wed</div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+          />
+          <div class="temp">Night - 22.6°C</div>
+          <div class="temp">Day - 32.7°C</div>
+        </div>
+
+        <div class="weather-item" id="current-temp">
+          <div class="day">Thu</div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+          />
+          <div class="temp">Night - 22.6°C</div>
+          <div class="temp">Day - 32.7°C</div>
+        </div>
+
+        <div class="weather-item" id="current-temp">
+          <div class="day">Fri</div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+          />
+          <div class="temp">Night - 22.6°C</div>
+          <div class="temp">Day - 32.7°C</div>
+        </div>
+
+        <div class="weather-item" id="current-temp">
+          <div class="day">Sat</div>
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather icon"
+            class="w-icon"
+          />
+          <div class="temp">Night - 22.4°C</div>
+          <div class="temp">Day - 32.7°C</div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
       integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
-      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
