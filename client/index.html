@@ -14,9 +14,7 @@
       <div class="container">
         <div class="current-info">
           <div class="date-container">
-            <div class="time" id="time">
-              {{date}}<span id="am-pm">{{ampm}}</span>
-            </div>
+            <div class="time" id="time">{{date}}<span id="am-pm">{{ampm}}</span></div>
             <div class="date" id="date">{{currentdatetime}}</div>
             <div class="temp">{{weather.current.temp}}°C</div>
             <img :src="imagetoday" alt="" />
@@ -25,12 +23,7 @@
           <div class="box">
             <i class="fa fa-search" aria-hidden="true"></i>
 
-            <input
-              @keyup.enter="searchMethod"
-              v-model="city"
-              class="input"
-              type="text"
-            />
+            <input @keyup.enter="searchMethod" v-model="city" class="input" type="text" />
           </div>
 
           <div class="place-container">
@@ -72,7 +65,7 @@
         <div class="today" id="current-temp">
           <div style="text-align: center">
             <img :src="imagetoday" />
-            <div>{{weather.daily[0].weather[0].description}}</div>
+            <div class="temp">{{weather.daily[0].weather[0].description}}</div>
           </div>
           <div class="other">
             <div class="day">Today</div>
