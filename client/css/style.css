@@ -30,6 +30,7 @@ body {
 }
 .date-container {
   font-weight: 100;
+  -webkit-text-stroke: 0.7px black;
 }
 .date-container .time {
   font-size: 70px;
@@ -41,8 +42,12 @@ body {
 }
 
 .weather {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 5px;
+}
+.time-zone {
+  -webkit-text-stroke: 0.7px black;
+  font-size: 50px;
 }
 
 .date-container .date {
@@ -202,62 +207,62 @@ body {
   }
 }
 @media only screen and (max-height: 652px) {
-  .future-forecast  {
-    width:100%;
+  .future-forecast {
+    width: 100%;
     font-size: 10px;
     padding: 10px;
   }
-  .future-forecast .weather-forecast .weather-item .temp  {
+  .future-forecast .weather-forecast .weather-item .temp {
     font-size: 12px;
   }
-  .future-forecast .weather-forecast .weather-item .day  {
+  .future-forecast .weather-forecast .weather-item .day {
     font-size: 15px;
     margin-bottom: 6px;
   }
-  .future-forecast .weather-forecast{
+  .future-forecast .weather-forecast {
     height: 120px;
   }
-  .future-forecast .weather-forecast .w-icon{
+  .future-forecast .weather-forecast .w-icon {
     height: 10vh;
   }
-  .future-forecast  .w-icon{
+  .future-forecast .w-icon {
     display: none;
   }
 }
 @media only screen and (max-height: 750px) {
-  .future-forecast  {
-    width:100%;
+  .future-forecast {
+    width: 100%;
     font-size: 10px;
     padding: 10px;
   }
-  .future-forecast .weather-forecast .weather-item .temp  {
+  .future-forecast .weather-forecast .weather-item .temp {
     font-size: 14px;
   }
-  .future-forecast .weather-forecast .weather-item .day  {
+  .future-forecast .weather-forecast .weather-item .day {
     font-size: 20px;
     margin-bottom: 6px;
   }
-  .future-forecast .weather-forecast .w-icon{
+  .future-forecast .weather-forecast .w-icon {
     height: 10vh;
   }
-  .future-forecast  .w-icon{
+  .future-forecast .w-icon {
     width: 80px;
   }
 }
 @media only screen and (max-height: 860px) {
-  .container .current-info .date-container .time #am-pm{
-    font-size: 16px
+  .container .current-info .date-container .time #am-pm {
+    font-size: 16px;
   }
-  .container .current-info .date-container .time{
-    font-size: 26px
+  .container .current-info .date-container .time {
+    font-size: 26px;
   }
-  .container .current-info .date-container .date{
-    font-size: 26px
+  .container .current-info .date-container .date {
+    font-size: 26px;
   }
-  .container .current-info .date-container .temp{
-    font-size: 30px
+  .container .current-info .date-container .temp {
+    font-size: 30px;
   }
-  .container .current-info .date-container .weather{
-    font-size: 18px
+  .container .current-info .date-container .weather {
+    font-size: 18px;
   }
 }

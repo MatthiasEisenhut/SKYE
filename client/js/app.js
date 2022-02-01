@@ -131,7 +131,7 @@ const myApp = {
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1920x1080/?" +
         this.city +
-        "%20landscape')";
+        "')";
       const { data } = await axios.get(
         `http://localhost:3000/weather/getData/${this.city}`
       );
